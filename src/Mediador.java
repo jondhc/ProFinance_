@@ -1,19 +1,19 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
-public class Interventor implements Controller {
+public class Mediador implements Controller {
 
     EstructuraDeDatos model;
     Interfaz view;
     int indice;
     boolean interfazEstaLimpia;
 
-    public Interventor(EstructuraDeDatos theModel, Interfaz theView) {
+    public Mediador(EstructuraDeDatos theModel, Interfaz theView) {
         model = theModel;
         view = theView;
         indice = 0;
         interfazEstaLimpia = false;
-    } //end Interventor
+    } //end Mediador
 
     public Movimiento obtieneDatoDelModel(int indice) {
         Movimiento dato;
@@ -215,4 +215,4 @@ public class Interventor implements Controller {
 
     } //end  actionPerformed
 
-} //end Interventor
+} //end Mediador

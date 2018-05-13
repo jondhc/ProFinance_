@@ -2,13 +2,13 @@ public class Main {
     public static void main(String args[]) {
         Interfaz view;
         EstructuraDeDatos model;
-        Interventor controller;
+        Mediador controller;
 
         model = new EstructuraDeDatos();
 
         view = new Interfaz();
 
-        controller = new Interventor(model, view);
+        controller = new Mediador(model, view);
 
         view.setActionListener(controller);
 
