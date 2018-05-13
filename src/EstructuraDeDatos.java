@@ -75,7 +75,7 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
         String concepto;
         String categoria;
 
-        repositorio = new SequentialFile("/Users/jondhc/Documents/Java/Patrones de diseño de software/ProFinanceV2/src", "registro", "txt");
+        repositorio = new SequentialFile("/Users/jondhc/Documents/Java/Patrones de diseño de software/ProFinance_/src", "registro", "txt");
         repositorio.create();
         i = 0;
         while (i < size() - 1) {
