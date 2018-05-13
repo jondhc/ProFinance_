@@ -3,7 +3,7 @@ public class Singleton {
     //TOTAL
 
     private static Singleton uniqueinstance;
-    private double singletonData;
+    private static double singletonData;
 
     private Singleton() throws Exception {
         if (uniqueinstance != null) {
@@ -27,7 +27,7 @@ public class Singleton {
         System.out.println(singletonData);
     } //end singletonOperation
 
-    public double getSingletonData() {
+    public static double getSingletonData() {
         return singletonData;
     } //end getSingletonData
 

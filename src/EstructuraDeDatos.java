@@ -13,8 +13,8 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
     } //end EstructuraDeDatos
 
     public static double getTotal() {
-        return total;
-    }
+        return Singleton.getSingletonData();
+    } //end getTotal
 
     public void cargaDatosDelRepositorioALaEstructura() {
         int numeroDeLineas;
@@ -28,6 +28,7 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
         double cantidad;
         String concepto;
         String categoria;
+
 
         total = 0.0;
         repositorio = new SequentialFile("/Users/jondhc/Documents/Java/Patrones de diseño de software/ProFinanceV2/src", "registro", "txt");
@@ -44,6 +45,9 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
             concepto = repositorio.readString();
             categoria = repositorio.readString();
             total += cantidad;
+            Singleton totalUniqueinstance = Singleton.instance();
+            totalUniqueinstance.setSingletonData(total);
+            totalUniqueinstance.singletonOperation();
 
             dato = new Movimiento();
 
