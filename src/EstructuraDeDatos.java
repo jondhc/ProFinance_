@@ -34,7 +34,7 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
 
         lista = new ConcreteAggregate();
         total = 0.0;
-        repositorio = new SequentialFile("/Users/jondhc/Documents/Java/Patrones de diseño de software/ProFinanceV2/src", "registro", "txt");
+        repositorio = new SequentialFile("/Users/jondhc/Documents/Java/Patrones de diseño de software/ProFinance_/src", "registro", "txt");
         repositorio.open();
         numeroDeLineas = repositorio.getNumberOfLines();
         numeroDeRegistros = numeroDeLineas / 6;

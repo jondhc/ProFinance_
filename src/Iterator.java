@@ -7,5 +7,5 @@ public interface Iterator {
 
     public boolean isDone();
 
-    public int Size();
+    public int size();
 } //end Iterator

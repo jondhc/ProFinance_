@@ -32,13 +32,17 @@ public class ConcreteIterator implements Iterator {
     } //end currentItem
 
     public boolean isDone() {
-        while (current.next != null) {
-            return true;
-        } //end while
-        return false;
+        boolean isDone = false;
+        if (current.next != null) {
+            isDone = false;
+        } //end if
+        else {
+            isDone = true;
+        } //end else
+        return isDone;
     } //end isDone
 
-    public int Size() {
+    public int size() {
         int size = 0;
         Movimiento element;
         element = myList.head;
