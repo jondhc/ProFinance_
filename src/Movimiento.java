@@ -83,4 +83,16 @@ public class Movimiento implements Comparable<Movimiento> {
             return 0;
         } //end else
     } //end compareTo
+
+    public String toString() {
+        String tipoDeMovimiento = "";
+        if (this.tipo == 'G') {
+            tipoDeMovimiento = "Gasto";
+        } //end if
+        else if (this.tipo == 'I') {
+            tipoDeMovimiento = "Ingreso";
+        } //end else
+        return ("\n Movimiento: " + "\n Tipo de Movimiento: " + tipoDeMovimiento + "\n Fecha: " + this.fecha + "\n Hora: " + this.hora + "\n Cantidad: " + this.cantidad + "\n Concepto: " + this.concepto + "\n Categoría: " + this.categoria + "\n ________");
+    } //end toString
+
 } //end Movimiento

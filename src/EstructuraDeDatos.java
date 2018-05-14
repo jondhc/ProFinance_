@@ -17,10 +17,13 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
     } //end getTotal
 
     public void cargaDatosDelRepositorioALaEstructura() {
+
         int numeroDeLineas;
         int numeroDeRegistros;
         int i;
 
+        Aggregate lista;
+        Iterator iterador;
         Movimiento dato;
         char tipo;
         String fecha;
@@ -29,7 +32,7 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
         String concepto;
         String categoria;
 
-
+        lista = new ConcreteAggregate();
         total = 0.0;
         repositorio = new SequentialFile("/Users/jondhc/Documents/Java/Patrones de diseño de software/ProFinanceV2/src", "registro", "txt");
         repositorio.open();
@@ -59,10 +62,15 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
             dato.setCategoria(categoria);
 
             add(dato);
+            lista.add(dato);
 
             i = i + 1;
 
         } //end while
+
+        iterador = lista.createIterator();
+        System.out.println(iterador.first());
+        System.out.println(iterador.next());
 
     } //end cargaDatosDelRepositorioALaEstructura;
 
