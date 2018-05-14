@@ -67,16 +67,15 @@ public class Movimiento implements Comparable<Movimiento> {
         categoria = unaCategoria;
     } //end setCategoria
 
-
     public int compareTo(Movimiento otroMovimiento) {
-        int otraFecha;
-        int laFecha;
-        otraFecha = Integer.parseInt(otroMovimiento.getFecha());
-        laFecha = Integer.parseInt(fecha);
-        if (laFecha > otraFecha) {
+        double otraCantidad;
+        double laCantidad;
+        otraCantidad = otroMovimiento.getCantidad();
+        laCantidad = cantidad;
+        if (laCantidad > otraCantidad) {
             return 1;
         } //end if
-        else if (laFecha < otraFecha) {
+        else if (laCantidad < otraCantidad) {
             return -1;
         } //end if
         else {
