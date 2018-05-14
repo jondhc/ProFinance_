@@ -1,3 +1,4 @@
+import javax.sound.midi.SysexMessage;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collections;
@@ -73,6 +74,10 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
         System.out.println(iterador.next());
         System.out.println(iterador.next());
         System.out.println(iterador.next());
+        while (!iterador.isDone()) {
+            System.out.println(iterador.next());
+        } //end while
+        System.out.println("Size: " + iterador.size());
 
     } //end cargaDatosDelRepositorioALaEstructura;
 
