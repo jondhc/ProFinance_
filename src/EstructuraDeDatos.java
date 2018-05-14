@@ -71,6 +71,8 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
         iterador = lista.createIterator();
         System.out.println(iterador.first());
         System.out.println(iterador.next());
+        System.out.println(iterador.next());
+        System.out.println(iterador.next());
 
     } //end cargaDatosDelRepositorioALaEstructura;
 

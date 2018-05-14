@@ -18,7 +18,9 @@ public class ConcreteIterator implements Iterator {
     } //end first
 
     public Object next() {
-        return current.next;
+        Object nextObject = current.next;
+        current = current.next;
+        return nextObject;
     } //end next
 
     public Object currentItem() {
