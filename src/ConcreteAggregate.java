@@ -23,4 +23,17 @@ public class ConcreteAggregate implements Aggregate {
         return new ConcreteIterator(this);
     } //end createIterator
 
+    public String toString() {
+        Movimiento current = head;
+        String movimientos = "";
+        if (current != null) {
+            while (current.next != null) {
+                movimientos += current.toString();
+                current = current.next;
+            } //end while
+            movimientos += current.toString();
+        } //end if
+        return movimientos;
+    } //end toString
+
 } //end ConcreteAggregate

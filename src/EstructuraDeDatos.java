@@ -240,6 +240,7 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
     public void deshacer() {
         System.out.println("Deshacer a respaldo");
         CareTaker.undo(object);
+        System.out.println(lista);
     } //end deshacer
 
 } //End EstructuraDeDatos
