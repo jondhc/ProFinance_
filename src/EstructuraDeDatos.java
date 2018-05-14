@@ -7,6 +7,7 @@ import java.util.LinkedList;
 
 public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
 
+    static Originator object;
     public static double total;
     SequentialFile repositorio;
     Aggregate lista;
@@ -232,11 +233,15 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
     } //end generaReporte
 
     public void respaldo() {
-        System.out.println("Respaldo seleccionado");
+        System.out.println("Respaldo realizado");
+        object = new Originator();
+        object.state = lista;
+        CareTaker.keep(object);
     } //end respaldo
 
     public void deshacer() {
-        System.out.println("Deshacer seleccionado");
+        System.out.println("Deshacer a respaldo");
+        CareTaker.undo(object);
     } //end deshacer
 
 } //End EstructuraDeDatos
