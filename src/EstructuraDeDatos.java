@@ -1,4 +1,5 @@
 import javax.sound.midi.SysexMessage;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collections;
@@ -175,6 +176,7 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
     } //end hayDatos
 
     public void generaReporte() {
+        String dir = "src/";
         String fileName = "reporte.csv";
         String COMMA_DELIMITER = ",";
         String NEW_LINE_SEPARATOR = "\n";
@@ -183,7 +185,7 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
 
 
         try {
-            fileWriter = new FileWriter(fileName);
+            fileWriter = new FileWriter(new File(dir, fileName));
             fileWriter.append(FILE_HEADER);
 
             fileWriter.append(NEW_LINE_SEPARATOR);
@@ -210,11 +212,11 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
                 i = i + 1;
             } //end while
 
-            System.out.println("CSV file was created successfully in the parent directory");
+            System.out.println("CSV file was created successfully in the src directory");
 
         } //end try
         catch (Exception e) {
-            System.out.println("Error in CsvFileWriter !!!");
+            System.out.println("Error in CsvFileWriter, check path.");
             e.printStackTrace();
         } //end catch
         finally {
