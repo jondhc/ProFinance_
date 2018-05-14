@@ -171,8 +171,6 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
     } //end procesa
 
     public boolean hayDatos() {
-        //end if
-//end else
         return size() > 0;
     } //end hayDatos
 
