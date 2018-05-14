@@ -1,11 +1,11 @@
 public interface Iterator {
-    Object first();
+    public Object first();
 
-    Object next();
+    public Object next();
 
-    Object currentItem();
+    public Object currentItem();
 
-    boolean isDone();
+    public boolean isDone();
 
-    int Size();
+    public int Size();
 } //end Iterator

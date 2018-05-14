@@ -6,6 +6,7 @@ public class Movimiento implements Comparable<Movimiento> {
     private double cantidad;
     private String concepto;
     private String categoria;
+    public Movimiento next;
 
     public Movimiento() {
         tipo = 'N';
@@ -14,6 +15,7 @@ public class Movimiento implements Comparable<Movimiento> {
         cantidad = 0;
         concepto = "";
         categoria = "";
+        next = null;
     } //end Movimiento
 
 
