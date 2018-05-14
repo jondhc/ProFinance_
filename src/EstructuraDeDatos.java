@@ -231,4 +231,12 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
         } //end finally
     } //end generaReporte
 
+    public void respaldo() {
+        System.out.println("Respaldo seleccionado");
+    } //end respaldo
+
+    public void deshacer() {
+        System.out.println("Deshacer seleccionado");
+    } //end deshacer
+
 } //End EstructuraDeDatos

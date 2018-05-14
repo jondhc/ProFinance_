@@ -131,6 +131,14 @@ public class Mediador implements Controller {
             model.generaReporte();
         } //end if
 
+        if (accion.equals("respaldo")) {
+            model.respaldo();
+        } //end if
+
+        if (accion.equals("deshacer")) {
+            model.deshacer();
+        } //end if
+
     } //end  solicitaActualizacionDelModel
 
     private void decrementaApuntador() {
@@ -211,6 +219,14 @@ public class Mediador implements Controller {
 
         if (botonAccionado == view.botonGuardar) {
             model.salvaDatosDeLaEstructuraAlRepositorio();
+        } //end if
+
+        if (botonAccionado == view.botonRespaldo) {
+            solicitaActualizacionDelModel("respaldo");
+        } //end if
+
+        if (botonAccionado == view.botonDeshacer) {
+            solicitaActualizacionDelModel("deshacer");
         } //end if
 
     } //end  actionPerformed
