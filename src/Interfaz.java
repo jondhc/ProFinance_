@@ -31,10 +31,10 @@ public class Interfaz extends Frame implements View {
     Button botonSiguiente;
     Button botonReporte;
     Button botonLimpiar;
-
-    ////////////////////////////////
     Button botonOrdenar;
     Button botonGuardar;
+    Button botonRespaldo;
+    Button botonDeshacer;
 
     public Interfaz() {
 
@@ -113,6 +113,8 @@ public class Interfaz extends Frame implements View {
         String strBotonLimpiar;
         String strBotonOrdenar;
         String strBotonGuardar;
+        String strBotonRespaldo;
+        String strBotonDeshacer;
 
         ////////////////////////////////
 
@@ -126,6 +128,8 @@ public class Interfaz extends Frame implements View {
         strBotonLimpiar = "Limpiar";
         strBotonOrdenar = "Ordenar";
         strBotonGuardar = "Guardar";
+        strBotonRespaldo = "Respaldo";
+        strBotonDeshacer = "Deshacer";
 
         ////////////////////////////////
 
@@ -139,60 +143,71 @@ public class Interfaz extends Frame implements View {
         botonLimpiar = new Button(strBotonLimpiar);
         botonOrdenar = new Button(strBotonOrdenar);
         botonGuardar = new Button(strBotonGuardar);
+        botonRespaldo = new Button(strBotonRespaldo);
+        botonDeshacer = new Button(strBotonDeshacer);
 
 
         ////////////////////////////////
 
         int xBotonRegistrarIngreso = 4;
-        int yBotonRegistrarIngreso = (alturaInterfaz / 12) * 6;
+        int yBotonRegistrarIngreso = (alturaInterfaz / 13) * 6;
         int wBotonRegistrarIngreso = anchoEstandarBoton;
         int hBotonRegistrarIngreso = altoEstandarBoton;
 
         int xBotonRegistrarGasto = (anchuraInterfaz / 2) - 2;
-        int yBotonRegistrarGasto = (alturaInterfaz / 12) * 6;
+        int yBotonRegistrarGasto = (alturaInterfaz / 13) * 6;
         int wBotonRegistrarGasto = anchoEstandarBoton;
         int hBotonRegistrarGasto = altoEstandarBoton;
 
         int xBotonModificar = 4;
-        int yBotonModificar = (alturaInterfaz / 12) * 8;
+        int yBotonModificar = (alturaInterfaz / 13) * 8;
         int wBotonModificar = anchoEstandarBoton;
         int hBotonModificar = altoEstandarBoton;
 
         int xBotonEliminar = (anchuraInterfaz / 2) - 2;
-        int yBotonEliminar = (alturaInterfaz / 12) * 8;
+        int yBotonEliminar = (alturaInterfaz / 13) * 8;
         int wBotonEliminar = anchoEstandarBoton;
         int hBotonEliminar = altoEstandarBoton;
 
         int xBotonAnterior = 4;
-        int yBotonAnterior = (alturaInterfaz / 12) * 9;
+        int yBotonAnterior = (alturaInterfaz / 13) * 9;
         int wBotonAnterior = anchoEstandarBoton;
         int hBotonAnterior = altoEstandarBoton;
 
         int xBotonSiguiente = (anchuraInterfaz / 2) - 2;
-        int yBotonSiguiente = (alturaInterfaz / 12) * 9;
+        int yBotonSiguiente = (alturaInterfaz / 13) * 9;
         int wBotonSiguiente = anchoEstandarBoton;
         int hBotonSiguiente = altoEstandarBoton;
 
         int xBotonReporte = 4;
-        int yBotonReporte = (alturaInterfaz / 12) * 10;
+        int yBotonReporte = (alturaInterfaz / 13) * 10;
         int wBotonReporte = anchoEstandarBoton;
         int hBotonReporte = altoEstandarBoton;
 
         int xBotonLimpiar = (anchuraInterfaz / 2) - 2;
-        int yBotonLimpiar = (alturaInterfaz / 12) * 10;
+        int yBotonLimpiar = (alturaInterfaz / 13) * 10;
         int wBotonLimpiar = anchoEstandarBoton;
         int hBotonLimpiar = altoEstandarBoton;
 
         int xBotonOrdenar = 4;
-        int yBotonOrdenar = (alturaInterfaz / 12) * 11;
+        int yBotonOrdenar = (alturaInterfaz / 13) * 11;
         int wBotonOrdenar = anchoEstandarBoton;
         int hBotonOrdenar = altoEstandarBoton;
 
         int xBotonGuardar = (anchuraInterfaz / 2) - 2;
-        int yBotonGuardar = (alturaInterfaz / 12) * 11;
+        int yBotonGuardar = (alturaInterfaz / 13) * 11;
         int wBotonGuardar = anchoEstandarBoton;
         int hBotonGuardar = altoEstandarBoton;
 
+        int xBotonRespaldo = 4;
+        int yBotonRespaldo = (alturaInterfaz / 13) * 12;
+        int wBotonRespaldo = anchoEstandarBoton;
+        int hBotonRespaldo = altoEstandarBoton;
+
+        int xBotonDeshacer = (anchuraInterfaz / 2) - 2;
+        int yBotonDeshacer = (alturaInterfaz / 13) * 12;
+        int wBotonDeshacer = anchoEstandarBoton;
+        int hBotonDeshacer = altoEstandarBoton;
         ////////////////////////////////
 
         botonRegistrarIngreso.setBounds(xBotonRegistrarIngreso, yBotonRegistrarIngreso, wBotonRegistrarIngreso, hBotonRegistrarIngreso);
@@ -205,6 +220,8 @@ public class Interfaz extends Frame implements View {
         botonLimpiar.setBounds(xBotonLimpiar, yBotonLimpiar, wBotonLimpiar, hBotonLimpiar);
         botonOrdenar.setBounds(xBotonOrdenar, yBotonOrdenar, wBotonOrdenar, hBotonOrdenar);
         botonGuardar.setBounds(xBotonGuardar, yBotonGuardar, wBotonGuardar, hBotonGuardar);
+        botonRespaldo.setBounds(xBotonRespaldo, yBotonRespaldo, wBotonRespaldo, hBotonRespaldo);
+        botonDeshacer.setBounds(xBotonDeshacer, yBotonDeshacer, wBotonDeshacer, hBotonDeshacer);
 
         ////////////////////////////////
 
@@ -218,6 +235,8 @@ public class Interfaz extends Frame implements View {
         add(botonLimpiar);
         add(botonOrdenar);
         add(botonGuardar);
+        add(botonRespaldo);
+        add(botonDeshacer);
 
         ////////////////////////////////////////////////////////////////
 
@@ -240,27 +259,27 @@ public class Interfaz extends Frame implements View {
         ////////////////////////////////
 
         int xCampoFecha = (anchuraInterfaz / 2) - 2;
-        int yCampoFecha = (alturaInterfaz / 12) * 1;
+        int yCampoFecha = (alturaInterfaz / 13) * 1;
         int wCampoFecha = anchoEstandarCampo;
         int hCampoFecha = altoEstandarCampo;
 
         int xCampoHora = (anchuraInterfaz / 2) - 2;
-        int yCampoHora = (alturaInterfaz / 12) * 2;
+        int yCampoHora = (alturaInterfaz / 13) * 2;
         int wCampoHora = anchoEstandarCampo;
         int hCampoHora = altoEstandarCampo;
 
         int xCampoCantidad = (anchuraInterfaz / 2) - 2;
-        int yCampoCantidad = (alturaInterfaz / 12) * 3;
+        int yCampoCantidad = (alturaInterfaz / 13) * 3;
         int wCampoCantidad = anchoEstandarCampo;
         int hCampoCantidad = altoEstandarCampo;
 
         int xCampoConcepto = (anchuraInterfaz / 2) - 2;
-        int yCampoConcepto = (alturaInterfaz / 12) * 4;
+        int yCampoConcepto = (alturaInterfaz / 13) * 4;
         int wCampoConcepto = anchoEstandarCampo;
         int hCampoConcepto = altoEstandarCampo;
 
         int xCampoCategoria = (anchuraInterfaz / 2) - 2;
-        int yCampoCategoria = (alturaInterfaz / 12) * 5;
+        int yCampoCategoria = (alturaInterfaz / 13) * 5;
         int wCampoCategoria = anchoEstandarCampo;
         int hCampoCategoria = altoEstandarCampo;
 
@@ -315,37 +334,37 @@ public class Interfaz extends Frame implements View {
         ////////////////////////////////
 
         int xEtiquetaFecha = 4;
-        int yEtiquetaFecha = (alturaInterfaz / 12) * 1;
+        int yEtiquetaFecha = (alturaInterfaz / 13) * 1;
         int wEtiquetaFecha = anchoEstandarEtiqueta;
         int hEtiquetaFecha = altoEstandarEtiqueta;
 
         int xEtiquetaHora = 4;
-        int yEtiquetaHora = (alturaInterfaz / 12) * 2;
+        int yEtiquetaHora = (alturaInterfaz / 13) * 2;
         int wEtiquetaHora = anchoEstandarEtiqueta;
         int hEtiquetaHora = altoEstandarEtiqueta;
 
         int xEtiquetaCantidad = 4;
-        int yEtiquetaCantidad = (alturaInterfaz / 12) * 3;
+        int yEtiquetaCantidad = (alturaInterfaz / 13) * 3;
         int wEtiquetaCantidad = anchoEstandarEtiqueta;
         int hEtiquetaCantidad = altoEstandarEtiqueta;
 
         int xEtiquetaConcepto = 4;
-        int yEtiquetaConcepto = (alturaInterfaz / 12) * 4;
+        int yEtiquetaConcepto = (alturaInterfaz / 13) * 4;
         int wEtiquetaConcepto = anchoEstandarEtiqueta;
         int hEtiquetaConcepto = altoEstandarEtiqueta;
 
         int xEtiquetaCategoria = 4;
-        int yEtiquetaCategoria = (alturaInterfaz / 12) * 5;
+        int yEtiquetaCategoria = (alturaInterfaz / 13) * 5;
         int wEtiquetaCategoria = anchoEstandarEtiqueta;
         int hEtiquetaCategoria = altoEstandarEtiqueta;
 
         int xEtiquetaTotal = 4;
-        int yEtiquetaTotal = (alturaInterfaz / 12) * 7;
+        int yEtiquetaTotal = (alturaInterfaz / 13) * 7;
         int wEtiquetaTotal = anchoEstandarEtiqueta;
         int hEtiquetaTotal = altoEstandarEtiqueta;
 
         int xEtiquetaCantidadTotal = anchuraInterfaz / 2;
-        int yEtiquetaCantidadTotal = (alturaInterfaz / 12) * 7;
+        int yEtiquetaCantidadTotal = (alturaInterfaz / 13) * 7;
         int wEtiquetaCantidadTotal = anchoEstandarEtiqueta;
         int hEtiquetaCantidadTotal = altoEstandarEtiqueta;
 
@@ -383,6 +402,8 @@ public class Interfaz extends Frame implements View {
         botonLimpiar.addActionListener(controller);
         botonOrdenar.addActionListener(controller);
         botonGuardar.addActionListener(controller);
+        botonRespaldo.addActionListener(controller);
+        botonDeshacer.addActionListener(controller);
 
     } //end setActionListener
 
