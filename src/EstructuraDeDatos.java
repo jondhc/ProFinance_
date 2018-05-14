@@ -8,6 +8,9 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
 
     public static double total;
     SequentialFile repositorio;
+    Aggregate lista;
+    Iterator iterador;
+    Movimiento dato;
 
     public EstructuraDeDatos() {
         cargaDatosDelRepositorioALaEstructura();
@@ -23,9 +26,7 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
         int numeroDeRegistros;
         int i;
 
-        Aggregate lista;
-        Iterator iterador;
-        Movimiento dato;
+
         char tipo;
         String fecha;
         String hora;
@@ -69,15 +70,6 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
 
         } //end while
 
-        iterador = lista.createIterator();
-        System.out.println(iterador.first());
-        System.out.println(iterador.next());
-        System.out.println(iterador.next());
-        System.out.println(iterador.next());
-        while (!iterador.isDone()) {
-            System.out.println(iterador.next());
-        } //end while
-        System.out.println("Size: " + iterador.size());
 
     } //end cargaDatosDelRepositorioALaEstructura;
 
@@ -89,6 +81,16 @@ public class EstructuraDeDatos extends LinkedList<Movimiento> implements Model {
         double cantidad;
         String concepto;
         String categoria;
+
+        iterador = lista.createIterator();
+        System.out.println(iterador.first());
+        System.out.println(iterador.next());
+        System.out.println(iterador.next());
+        System.out.println(iterador.next());
+        while (!iterador.isDone()) {
+            System.out.println(iterador.next());
+        } //end while
+        System.out.println("Size: " + iterador.size());
 
         repositorio = new SequentialFile("/Users/jondhc/Documents/Java/Patrones de diseño de software/ProFinance_/src", "registro", "txt");
         repositorio.create();
